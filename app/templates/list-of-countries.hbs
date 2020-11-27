@@ -1,0 +1,47 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">List of G-20 Countries</h1>
+    <p class="lead">There are 20 countries in the G-20</p>
+  </div>
+</div>
+
+  <span class="form-group" style="display: inline-block;">
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Search for a Country" style="display: inline-block; width : 300px">
+    <span><button type="button" class="btn btn-primary" style="position: relative; margin-left : 10px;">Search</button>
+    </span> 
+  </span>
+
+<table class="table">
+  <thead class="thead-dark">
+     
+    <tr>
+      <th scope="col">Number</th>
+      <th scope="col">Country</th>
+      <th scope="col">Continent</th>
+      <th scope="col">Population</th>
+      <th scope="col">Area</th>
+      <th scope="col">GDP(PPP)</th>
+      <th scope="col">GDP(Nom)</th>
+      <th scope="col">Per captia(PPP)</th>
+      <th scope="col">Per captia(Nom)</th>
+    </tr>
+  
+  </thead>
+  <tbody>
+        {{#each @model as |countryList|}}
+    <tr>
+         <th scope="row">{{countryList.number}}</th>
+  <td>{{countryList.country}}</td>
+  <td>{{countryList.continent}}</td>
+  <td>{{countryList.population}}</td>
+  <td>{{countryList.gdpppp}}</td>
+  <td>{{countryList.gpdnom}}</td>
+  <td>{{countryList.gdpperppp}}</td>
+  <td>{{countryList.gdpnom}}</td>
+  <td>{{countryList.area}}</td>
+    </tr> 
+     {{/each}}
+  </tbody>
+</table>
+
+

@@ -7,4 +7,10 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function() {
+  this.route('add-gist', { path: '/add-gist'});
+  this.route('nav');
+  this.route('home', { path : '/home'});
+  this.route('list-of-countries');
+  this.route('list-of-venues');
+  this.route('not-found', { path: '/*path' });
 });
